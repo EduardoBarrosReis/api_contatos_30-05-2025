@@ -22,7 +22,7 @@ exports.getAtendimentoById = async (req, res) => {
 
 try {
 
-const atendimento = await atendimento.findById(req.params.id);
+const atendimento = await Atendimento.findById(req.params.id);
 
 if (!atendimento) return res.status(404).json({ mensagem: 'Atendimento não encontrado' });
 
